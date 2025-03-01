@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Radiation Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Space Radiation Simulation</h1>
+            <button id="logoutBtn" style="float: right;">Logout</button>
+        </div>
+        <div class="content">
+            <div class="intro">
+                <h2>Introduction</h2>
+                <p>Welcome to the Space Radiation Simulation website. Here, you can simulate the effects of space radiation on various metals and determine their suitability for spacecraft construction.</p>
+            </div>
+            <div class="about">
+                <h2>About Us</h2>
+                <p>We are a team of space enthusiasts dedicated to providing accurate simulations and data analysis for space radiation effects.</p>
+            </div>
+        </div>
+        <div class="simulation-options">
+            <button id="simulateBtn">Simulate 3D</button>
+            <button id="graphBtn">Generate 2D Graph</button>
+        </div>
+        <div class="simulation-form">
+            <select id="metalSelect">
+                <option value="aluminium">Aluminium</option>
+                <option value="tin">Tin</option>
+                <option value="graphite">Graphite</option>
+                <option value="iron">Iron</option>
+                <option value="copper">Copper</option>
+                <option value="steel">Steel</option>
+            </select>
+            <select id="radiationSelect">
+                <option value="gamma">Gamma Rays</option>
+                <option value="alpha">Alpha Rays</option>
+                <option value="beta">Beta Rays</option>
+            </select>
+            <input type="number" id="temperature" placeholder="Temperature (K)">
+            <input type="number" id="intensity" placeholder="Intensity (W/m²)">
+            <button id="startSimulation">Start Simulation</button>
+        </div>
+        <div class="results">
+            <h2>Simulation Results</h2>
+            <p id="resultText"></p>
+        </div>
+        <div id="graph" style="width: 100%; height: 400px;"></div>
+        <div id="simulation3d" style="width: 100%; height: 400px;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
